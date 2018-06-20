@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"> 
+    window.onload=function(){
+        var today= new Date();
+        var yyyy= today.getFullYear();
+        var endYear=yyyy-13;
+        var startYear=yyyy-70;
+        var selectedYear=parseInt((endYear+startYear)/2);
+        var age=document.getElementById("age");
+        for(var i=startYear; startYear<endYear; startYear++){
+                var listItem = document.createElement("option");
+                listItem.setAttribute('value',startYear);
+                if(startYear==selectedYear){listItem.setAttribute('selected','selected');}
+                listItem.innerText = startYear;
+                age.appendChild(listItem);
+        }
+    }; 
+</script>
+</head>
+<body>
+	<h1>LOGIN PAGE</h1>
+	<form>
+		<div>
+			<label for="">이메일</label>
+			<input type="text" name="" id="">
+		</div>
+		<div>
+			<label for="">닉네임</label>
+			<input type="text" name="" id="">
+		</div>
+		<div>
+			<label for="">비밀번호</label>
+			<input type="text" name="" id="">
+		</div>
+		<div>
+			<label for="">비밀번호 재입력</label>
+			<input type="text" name="" id="">
+		</div>
+		<div>
+			<label for="">전화번호</label>
+			<input type="tel" name="" id="">
+		</div>
+		상세정보
+		<div>
+			<label for="">성별</label>
+			<input type="radio" name="gender" id="" value="">여성
+			<input type="radio" name="gender" id="" value="">남성
+		</div>
+		<div>
+			<label for="">연령</label>
+			<select id="age"></select>
+		</div>
+		<div>
+			<label for="">피부타입</label>
+			<input type="radio" name="skin" id="" value="">건성
+			<input type="radio" name="skin" id="" value="">지성
+			<input type="radio" name="skin" id="" value="">민감성
+		</div>
+		<div>
+			<button type="submit">입력</button>
+		</div>
+	</form>
+</body>
+</html>
