@@ -4,16 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
-    var terms1 = document.getElementById("terms1");
-    var terms2 = document.getElementById("terms2");
-    var terms1Result = terms1.getAttribute("checked");
-    var terms2Result = terms2.getAttribute("checked");
+    window.onload=function(){
+        var terms1 = document.getElementById("terms1");
+        var terms2 = document.getElementById("terms2");
+        var terms1Result = terms1.getAttribute("checked");
+        var terms2Result = terms2.getAttribute("checked");
     
-    if(terms1Result==true || terms2Result==true){
-       function agree(){
-           location.href = "회원가입";
-       }
-    }
+        if(terms1Result==true || terms2Result==true){
+           function agree(){
+               location.href = "회원가입";
+        }
+        }  
+    };
 </script>
 </head>
 <body>
